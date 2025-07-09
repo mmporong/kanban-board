@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'kanban_board_data.json';
+        a.download = 'data.json';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
