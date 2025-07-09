@@ -28,7 +28,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh; /* 최소 높이 설정 */
 }
 
 body.dark-mode {
@@ -90,6 +90,19 @@ body.dark-mode {
 
 .theme-toggle-btn:hover {
     transform: scale(1.1);
+}
+
+.board-section {
+    margin-bottom: 30px; /* 섹션 간 간격 */
+    flex-grow: 1; /* 공간을 채우도록 설정 */
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: var(--text-color-light);
 }
 
 .kanban-board {
@@ -227,6 +240,23 @@ body.dark-mode {
 
 .dragging {
     opacity: 0.5;
+}
+
+/* 지난 주 보드 스타일 */
+.past-week-section .column .add-card-btn {
+    display: none; /* 지난 주 보드에서는 카드 추가 버튼 숨김 */
+}
+
+.past-week-section .card {
+    cursor: default; /* 지난 주 보드에서는 카드 드래그 비활성화 */
+}
+
+.past-week-section .card .delete-card {
+    display: none; /* 지난 주 보드에서는 삭제 버튼 숨김 */
+}
+
+.past-week-section .card .card-title, .past-week-section .card .card-description {
+    pointer-events: none; /* 지난 주 보드에서는 인라인 편집 비활성화 */
 }
 
 /* Responsive Design */

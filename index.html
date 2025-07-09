@@ -17,8 +17,19 @@
             <button id="theme-toggle" class="theme-toggle-btn">☀️</button>
         </div>
     </div>
-    <div class="kanban-board" id="kanban-board">
-        <!-- JavaScript에 의해 동적으로 컬럼이 생성됩니다 -->
+    
+    <div class="board-section">
+        <h2 class="section-title">이번 주</h2>
+        <div class="kanban-board" id="current-week-board">
+            <!-- JavaScript에 의해 동적으로 컬럼이 생성됩니다 -->
+        </div>
+    </div>
+
+    <div class="board-section past-week-section">
+        <h2 class="section-title">지난 주</h2>
+        <div class="kanban-board" id="previous-week-board">
+            <!-- JavaScript에 의해 동적으로 컬럼이 생성됩니다 -->
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
